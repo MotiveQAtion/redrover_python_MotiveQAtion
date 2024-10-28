@@ -25,4 +25,4 @@
 **Полезные ссылки:**
 
 1. Репозиторий прошлого потока: <https://github.com/victoretc/selenium_automation_course>
-2. Ссылка на базу знаний: <https://victoretc.github.io/helloauto/> | К сожалению устарела, но может быть, что то полезное найдете.  
+2. Ссылка на базу знаний: <https://victoretc.github.io/helloauto/> | К сожалению устарела, но может быть, что то полезное найдете. 
