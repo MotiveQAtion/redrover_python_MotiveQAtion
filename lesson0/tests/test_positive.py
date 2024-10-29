@@ -1,5 +1,7 @@
-from requests import request
 from http import HTTPStatus
+
+from requests import request
+
 
 # API, который использовался для написания автотестов: <https://reqres.in/>
 
