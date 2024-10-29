@@ -11,18 +11,30 @@ driver = webdriver.Chrome(service=service)
 
 def test1():
     driver.get("http://195.133.27.184/")
-    time.sleep(5)
-
-def test2():
-    print()
-    driver.get("http://195.133.27.184/")
-    url = driver.current_url
-    print(url)
+    url =driver.current_url
     assert url == "http://195.133.27.184/"
 
+
+def test2():
+    driver.get("http://195.133.27.184/")
     title = driver.title
-    print(title)
     assert title == "Объявления"
+
+def test3():
+    driver.get("http://195.133.27.184/")
+    locator = "(//div/a[@href='/list/'])[1]"
+    check = driver.find_element(By.XPATH, locator)
+    check.click()
+    driver.back()
+    driver.forward()
+    driver.refresh()
+    assert driver.current_url == "http://195.133.27.184/list/"
+
+
+
+
+
+
 
 
 
