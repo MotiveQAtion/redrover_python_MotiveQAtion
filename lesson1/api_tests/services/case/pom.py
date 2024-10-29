@@ -5,5 +5,4 @@ def create_case(json=None):
     if json is None:
         json = {}
     response = client.make_request(handle="/testcases", method="POST", json=json)
-
     return response
