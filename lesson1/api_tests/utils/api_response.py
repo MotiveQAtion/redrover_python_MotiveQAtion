@@ -6,6 +6,7 @@ from requests import Response
 
 class APIResponse:
     def __init__(self, response: Response):
+        self._current_value = None
         self.response = response
 
     def status_code_should_be_eq(self, expected_status):

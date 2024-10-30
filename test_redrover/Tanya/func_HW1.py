@@ -1,10 +1,9 @@
 import requests
-from pprint import pprint
 
 URL = "http://127.0.0.1:8000/testcases"
 
 
-1 - GET
+# 1 - GET
 def read_cases():
     return requests.get(URL)
 
