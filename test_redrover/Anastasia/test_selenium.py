@@ -14,7 +14,6 @@ def test1():
     time.sleep(5)
 
 def test2():
-    print()
     driver.get("http://195.133.27.184/")
     url = driver.current_url
     print(url)
@@ -23,6 +22,10 @@ def test2():
     title = driver.title
     print(title)
     assert title == "Объявления"
+
+def test3():
+    driver.get("http://195.133.27.184/")
+
 
 
 
