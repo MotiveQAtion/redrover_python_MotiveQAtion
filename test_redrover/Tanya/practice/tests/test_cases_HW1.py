@@ -1,5 +1,5 @@
-import func_HW1 as func
-from pprint import pprint
+from test_redrover.Tanya.practice.tests import func_HW1 as func
+
 
 # 1 - GET - Read Cases
 # def test_read_cases():
