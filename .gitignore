@@ -130,3 +130,7 @@ dmypy.json
 
 /allure_data/
 allure-results/
+
+*~
+*.py~
+

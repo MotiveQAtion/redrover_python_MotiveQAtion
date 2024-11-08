@@ -1,0 +1,64 @@
+name: Task
+description: Template for creating a new task
+title: "[TASK] "
+labels: 
+  - task
+assignees: []  # Leave blank to allow assignment later
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Fill in the details for the new task:**
+
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: "Description"
+      description: "Details of the task"
+      placeholder: "Enter task details"
+    validations:
+      required: false
+
+  - type: input
+    id: task_due_date
+    attributes:
+      label: "Due Date"
+      description: "Deadline for the task"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: task_priority
+    attributes:
+      label: "Priority"
+      description: "Select task priority"
+      options:
+        - label: "High"
+        - label: "Medium"
+        - label: "Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_status
+    attributes:
+      label: "Status"
+      description: "Current status of the task"
+      options:
+        - To Do
+        - In Progress
+        - Done         
+    validations:
+      required: true
+      
+  - type: textarea
+    id: task_additional_notes
+    attributes:
+      label: "Notes"
+      description: "Any additional comments"
+      placeholder: "Enter notes"
+    validations:
+      required: false

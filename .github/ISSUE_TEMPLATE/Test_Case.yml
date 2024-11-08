@@ -1,0 +1,73 @@
+name: Test Case
+description: Template for creating a new TC
+title: "{{tc_details}}"  # Single field for both ID and title
+labels:
+  - task
+assignees: []  # Leave blank to allow assignment later
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Test Case (TC) Details:**
+
+  - type: input
+    id: tc_details
+    attributes:
+      label: "Test Case Details"
+      description: "Enter both Test Case ID and Title in the format: TC_000.000.000 | Test Case Title"
+      placeholder: "TC_011.017.001|Sale>Multiple discounts > Purchase more than $200"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Preconditions:**
+        - Browsers: List the browsers where the issue was observed.
+        - OS: List the impacted operating systems.
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: "What browsers do you see the problem on?"
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: "What is the impacted environment?"
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: true
+
+  - type: textarea
+    id: tc_steps
+    attributes:
+      label: "Steps"
+      description: "Steps to execute the test case"
+      placeholder: "Enter test case steps"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tc_expected_results
+    attributes:
+      label: "Expected Results"
+      description: "The expected outcome after executing the test case"
+      placeholder: "Enter expected results"
+    validations:
+      required: true
