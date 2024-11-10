@@ -1,0 +1,39 @@
+name: User Story
+description: Template for creating a User Story
+title: "[US] "
+labels:
+  - user-story
+assignees: []  # Leave blank to allow assignment later
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **User Story Details:**
+
+  - type: textarea
+    id: us_description
+    attributes:
+      label: "Description"
+      description: "User story overview"
+      placeholder: "As [user], I want to [action] so that [benefit]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: us_preconditions
+    attributes:
+      label: "Preconditions"
+      description: "Conditions that need to be met before this user story can be executed"
+      placeholder: "Example: logged in, on a specific page, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: us_acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Steps or conditions that need to be met to consider this user story complete"
+      placeholder: "Example: Verify user can log in with valid credentials"
+    validations:
+      required: true
