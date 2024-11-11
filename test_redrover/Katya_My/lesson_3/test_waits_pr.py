@@ -7,6 +7,7 @@ def test_expected_conditions(driver, wait):
     assert title_page == 'Практика с ожиданиями в Selenium'
 
     wait.until(EC.visibility_of_element_located((By.ID, 'startTest'))).click()
+
     driver.find_element(By.ID, 'login').send_keys('login')
     driver.find_element(By.ID, 'password').send_keys('password')
     driver.find_element(By.ID, 'agree').click()
