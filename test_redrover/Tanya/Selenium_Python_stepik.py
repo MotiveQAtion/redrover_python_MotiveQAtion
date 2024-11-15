@@ -1,25 +1,25 @@
-
-
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-#1 Мастер заполнения форм
+# 1 Мастер заполнения форм
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/1/1.html')
-    # input_form = browser.find_elements(By.CLASS_NAME, 'form')
-    # for field in input_form:
-    #     field.send_keys("Текст")
-    #
-    # browser.find_element(By.ID, 'btn').click()
-    # time.sleep(5)
-    # result = browser.find_element(By.ID, 'result').text
-    #
-    # print(result)
+# input_form = browser.find_elements(By.CLASS_NAME, 'form')
+# for field in input_form:
+#     field.send_keys("Текст")
+#
+# browser.find_element(By.ID, 'btn').click()
+# time.sleep(5)
+# result = browser.find_element(By.ID, 'result').text
+#
+# print(result)
 
-#2 Охотник за Сокровищами
+# 2 Охотник за Сокровищами
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/2/2.html')
@@ -30,7 +30,7 @@ from selenium.webdriver.support.ui import Select
 #     result = browser.find_element(By.ID, 'result').text
 #     print(result)
 
-#3 Кодекс Охотников за Цифрами
+# 3 Кодекс Охотников за Цифрами
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/3/3.html')
@@ -41,7 +41,7 @@ from selenium.webdriver.support.ui import Select
 #
 #     print(counter)
 
-#4  Поход за сокровищами в Цифровом Лабиринте
+# 4  Поход за сокровищами в Цифровом Лабиринте
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/3/3.html')
@@ -55,7 +55,7 @@ from selenium.webdriver.support.ui import Select
 #
 #     print(counter)
 
-#5 Операция 'Кодовый Замок
+# 5 Операция 'Кодовый Замок
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/4/4.html')
@@ -68,7 +68,7 @@ from selenium.webdriver.support.ui import Select
 #
 #     print(result)
 
-#6  Кодовая Одиссея
+# 6  Кодовая Одиссея
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/5/5.html')
@@ -99,7 +99,7 @@ from selenium.webdriver.support.ui import Select
 #
 #     print(result)
 
-#7 Операция "Выпадающие списки"
+# 7 Операция "Выпадающие списки"
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/7/7.html')
 #     find_elements = browser.find_elements(By.TAG_NAME, 'option')
@@ -112,7 +112,7 @@ from selenium.webdriver.support.ui import Select
 #     result = browser.find_element(By.ID, 'result').text
 #     print(result)
 
-#8  Миссия "Загадочный След"
+# 8  Миссия "Загадочный След"
 
 # with webdriver.Chrome() as browser:
 #     browser.get('https://parsinger.ru/selenium/6/6.html')
@@ -133,5 +133,65 @@ from selenium.webdriver.support.ui import Select
 #     browser.find_element(By.ID, 'sendbutton').click()
 #     result = browser.find_element(By.ID, 'result').text
 #     print(result)
+
+# Раздел 8.8
+
+# 1
+# with webdriver.Chrome() as browser:
+#     browser.get('https://parsinger.ru/expectations/3/index.html')
+#     btn = WebDriverWait(browser, timeout=10).until(EC.element_to_be_clickable((By.ID, 'btn')))
+#     btn.click()
+#     title = WebDriverWait(browser, timeout=0).until(EC.title_is('345FDG3245SFD'))
+#     text = browser.find_element(By.ID, 'result').text
+#
+#     print(text)
+
+# 2
+# with webdriver.Chrome() as browser:
+#     browser.get('https://parsinger.ru/expectations/4/index.html')
+#     btn = WebDriverWait(browser, timeout=10).until(EC.element_to_be_clickable((By.ID, 'btn')))
+#     btn.click()
+#     if WebDriverWait(browser, timeout=35).until(EC.title_contains('JK8HQ')):
+#         text = browser.title
+#
+#     print(text)
+
+# 3
+# with webdriver.Chrome() as browser:
+#     browser.get('https://parsinger.ru/expectations/6/index.html')
+#     btn = WebDriverWait(browser, timeout=10).until(EC.element_to_be_clickable((By.ID, 'btn')))
+#     btn.click()
+#     # locator = browser.find_element((By.CLASS_NAME, 'BMH21YY'))
+#     element = WebDriverWait(browser, 30).until(EC.presence_of_element_located((By.CLASS_NAME, 'BMH21YY')))
+#     text = element.text
+#
+#     print(text)
+
+# 4
+# with webdriver.Chrome() as browser:
+#     browser.get('https://parsinger.ru/selenium/5.9/2/index.html')
+#     block = WebDriverWait(browser, timeout=100).until(EC.presence_of_element_located((By.ID, 'qQm9y1rk')))
+#     block.click()
+#     text1 = browser.switch_to.alert
+#     text2 = text1.text
+#
+#     print(text2)
+
+# 5
+# with webdriver.Chrome() as browser:
+#     browser.implicitly_wait(60)
+#     browser.get('https://parsinger.ru/selenium/5.9/3/index.html')
+#     ids_to_find = ['xhkVEkgm', 'QCg2vOX7', '8KvuO5ja', 'CFoCZ3Ze', '8CiPCnNB', 'XuEMunrz', 'vmlzQ3gH', 'axhUiw2I',
+#                    'jolHZqD1', 'ZM6Ms3tw', '25a2X14r', 'aOSMX9tb', 'YySk7Ze3', 'QQK13iyY', 'j7kD7uIR']
+#
+#     # boxes = browser.find_elements(By.XPATH, '//div[@id="display: block;"]')
+#     for i in ids_to_find:
+#         box = WebDriverWait(browser, timeout=100).until(EC.visibility_of_element_located((By.ID, i)))
+#         box.click()
+#
+#     text1 = browser.switch_to.alert
+#     text2 = text1.text
+#
+#     print(text2)
 
 
