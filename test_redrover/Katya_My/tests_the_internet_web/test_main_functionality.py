@@ -3,10 +3,7 @@ import requests
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from test_redrover.Katya_My.tests_the_internet_web.locators import *
-
-username = "admin"
-password = "admin"
-url = f"http://{username}:{password}@the-internet.herokuapp.com/basic_auth"
+from test_redrover.Katya_My.tests_the_internet_web.data import *
 
 
 def test_add_remove_elements(driver, wait):
@@ -48,20 +45,24 @@ def test_check_broken_images(driver, wait):
             # метаинформацию о ресурсе, например, его статус или размер, не загружая сам файл.)
             if response.status_code != 200:
                 print(f"Broken image found: {src} (Status: {response.status_code})")
-                # Проверяем, если есть сломанные изображения, то тест падает
+                # эта проверка - если есть сломанные изображения, то тест падает
                 # assert False, f"Broken image found: {src} (Status: {response.status_code})"
 
 
 def test_checkbox(driver, wait):
     driver.find_element(*checkbox_menu).click()
-    time.sleep(3)
     checkboxes = driver.find_elements(*check_box_btn_1)
     for checkbox in checkboxes:
         if not checkbox.is_selected():
             checkbox.click()  # Выбираем, если не выбрано
         else:
             checkbox.click()
-            # for checkbox in checkboxes:
-    #     initial_state = checkbox.is_selected()
-    #     checkbox.click()
-    #     assert checkbox.is_selected() != initial_state, "Состояние чекбокса не изменилось"
+
+
+def test_checkbox_second(driver, wait):
+    driver.find_element(*checkbox_menu).click()
+    checkboxes = driver.find_elements(*check_box_btn_1)
+    for checkbox in checkboxes:
+        initial_state = checkbox.is_selected()
+        checkbox.click()
+        assert checkbox.is_selected() != initial_state, "The checkbox state has not changed"

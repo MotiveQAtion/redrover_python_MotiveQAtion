@@ -20,3 +20,4 @@ class LoginPage:
 
     def get_password_error_text(self):
         return self.driver.find_element(*Login.alert_required_filed_password).text
+
