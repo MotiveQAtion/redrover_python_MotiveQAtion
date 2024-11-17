@@ -1,6 +1,3 @@
-user_name = "TestUser_1"
-c_password = "test5test78"
-
 incorrect_username = "TestUser"
 incorrect_password = "Passwordfortestuser123"
 
@@ -9,3 +6,4 @@ mms_login_alert = (
 
 mms_empty_password = 'Обязательное поле.'
 mms_empty_login = 'Обязательное поле.'
+mms_error = 'Пользователь с таким именем уже существует.'
