@@ -1,4 +1,4 @@
-from test_redrover.Tanya.practice.tests import func_HW1 as func
+from test_redrover.Tanya.Homeworks import func_HW1 as func
 
 
 # 1 - GET - Read Cases

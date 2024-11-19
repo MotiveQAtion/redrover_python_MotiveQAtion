@@ -8,6 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.alert import Alert
 import pytest
+from test_redrover.Tanya.Homeworks.locators.locators import *
+from test_redrover.Tanya.Homeworks.data.urls import *
 
 
 # 1. С использованием Explicit waits и Expected Conditions
@@ -117,3 +119,35 @@ import pytest
 #         time.sleep(2)
 #
 #         assert len(browser.find_elements(By.XPATH, "//button[@onclick='deleteElement()']")) == 0
+
+# registration PythonProject
+
+# def test_check_registration():
+#     with webdriver.Chrome() as browser:
+#         browser.get("http://195.133.27.184/")
+#
+#         registration_btn = browser.find_element(By.XPATH, '//a[@href="/signup/"]')
+#         registration_btn.click()
+#
+#         username = browser.find_element(By.ID, 'id_username').send_keys('usernameTest3')
+#         password1 = browser.find_element(By.ID, 'id_password1').send_keys('12345test')
+#         password2 = browser.find_element(By.ID, 'id_password2').send_keys('12345test')
+#
+#         submit_btn = browser.find_element(By.XPATH, '//button[@type="submit"]')
+#         submit_btn.click()
+#
+#         assert browser.find_element(By.XPATH, '//a[@href="/logout/"]').is_displayed()
+
+def test_check_login(browser):
+    # with webdriver.Chrome() as browser:
+    browser.get(BASE_URL)
+    login_btn = browser.find_element(LOGIN_BTN)
+    login_btn.click()
+
+    browser.find_element(*LOGIN_USERNAME).send_keys('usernameTest3')
+    browser.find_element(*LOGIN_PASSWORD).send_keys('12345test')
+
+    submit_btn = browser.find_element(*SUBMIT_BTN)
+    submit_btn.click()
+
+    assert browser.find_element(*LOGOUT_BTN).is_displayed()
