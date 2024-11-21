@@ -18,3 +18,6 @@ class BasePage:
 
     def element_is_present(self, locator, timeout=10):
         return wait(self.browser, timeout=timeout).until(EC.presence_of_element_located(locator))
+
+    def alert_is_visible(self, timeout=10):
+        wait(self.browser, timeout=timeout).until(EC.alert_is_present())
