@@ -128,8 +128,8 @@ dmypy.json
 
 .ruff_cache/
 
-/allure_data/
-allure-results/
+
+
 
 *~
 *.py~

@@ -1,5 +1,5 @@
 from selene import by, be, have, browser
-from core.settings import settings
+from lesson4.core.settings import settings
 
 
 def visit():

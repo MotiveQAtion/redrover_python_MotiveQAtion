@@ -1,5 +1,5 @@
 from playwright.sync_api import Page, expect
-from core.data import base_url
+from lesson5.core.data import base_url
 import allure
 class Header:
     def __init__(self, page: Page):
