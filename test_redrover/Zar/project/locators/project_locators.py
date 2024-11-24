@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 REGISTRATION_BUTTON = By.XPATH, '//a[@href="/signup/"]'
 REGISTRATION_USERNAME = By.ID, 'id_username'
 REGISTRATION_PASSWORD1 = By.ID, 'id_password1'
