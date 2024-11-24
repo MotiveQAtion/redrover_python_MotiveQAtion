@@ -1,6 +1,7 @@
 import time
-from test_redrover.Zar.project.data.urls import *
-from test_redrover.Zar.project.locators.project_locators import *
+from test_redrover.Zarina.project.data.urls import *
+from test_redrover.Zarina.project.locators.project_locators import *
+
 
 class TestProject():
 
