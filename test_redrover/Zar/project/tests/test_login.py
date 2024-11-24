@@ -2,6 +2,7 @@ import time
 from test_redrover.Zar.project.data.urls import *
 from test_redrover.Zar.project.locators.project_locators import *
 
+
 class TestLogin:
     def test_login(self, driver):
         driver.get(BASE_URL)

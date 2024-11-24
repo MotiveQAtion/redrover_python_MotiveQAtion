@@ -2,6 +2,7 @@ import time
 from test_redrover.Zar.project.data.urls import *
 from test_redrover.Zar.project.locators.project_locators import *
 
+
 class TestProject():
 
     def test_registration(self, driver):
