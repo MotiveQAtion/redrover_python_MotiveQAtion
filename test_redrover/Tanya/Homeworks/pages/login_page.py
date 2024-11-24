@@ -20,9 +20,9 @@ class LoginPage(BasePage):
         # login_btn = browser.find_element(LOGIN_BTN)
         # login_btn.click()
 
-        self.browser.find_element(LOGIN_USERNAME).send_keys('test')
-        self.browser.find_element(LOGIN_PASSWORD).send_keys('testtest')
+        self.browser.find_element(*LOGIN_USERNAME).send_keys('test')
+        self.browser.find_element(*LOGIN_PASSWORD).send_keys('testtest')
 
-        submit_btn = self.browser.find_element(SUBMIT_BTN)
+        submit_btn = self.browser.find_element(*SUBMIT_BTN)
         submit_btn.click()
 
