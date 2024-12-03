@@ -1,2 +1,2 @@
-BASE_URL = "http://195.133.27.184/"
-LOGIN_URL = 'http://195.133.27.184/list/'
+BASE_URL = "https://misleplav.ru/"
+LOGIN_URL = 'https://misleplav.ru/list/'
